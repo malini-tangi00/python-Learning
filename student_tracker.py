@@ -92,7 +92,7 @@ def calculation_result(percentage):
     else:
         return "fail"
 def performance_report():
-    roll_no=int(input("enter a roll no fornperformance report:"))
+    roll_no=int(input("enter a roll no for performance report:"))
     for student in students:
         if student["roll_no"]==roll_no:
             total=calculation_total(student)
@@ -128,6 +128,7 @@ def top_3_performers():
         print("percentage:",round(percentage,2),"%")
 def class_statistics():
     if len(students)==0:
+        print("no students available.")
         return
     total_students=len(students)
     passed=0
